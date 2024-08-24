@@ -1,5 +1,7 @@
 <template>
     <div class="product-list-container">
+        {{ project_id }}
+
         <h1>Productos</h1>
         <table>
             <thead>
@@ -22,7 +24,7 @@
                 </tr>
             </tbody>
         </table>
-        <button @click="showAddProduct = true">Agregar Producto</button>
+        <button @click="showAddProduct = true" class="btn-add-product">Agregar producto</button>
 
         <div v-if="showAddProduct || selectedProduct" class="product-form">
             <input v-model="productForm.name" placeholder="Nombre">
@@ -51,6 +53,7 @@ export default {
                 price: 0,
                 description: "",
             },
+            project_id: process.env.VUE_APP_PROJECT_ID,
         };
     },
     async created() {
@@ -114,8 +117,16 @@ th {
     background-color: #f5f5f5;
 }
 
-.btn-small.btn-danger {
+.btn-small {
+    background-color: antiquewhite;
+    border-radius: 4px;
+    margin-left: 10px;
+    border: 0;
+}
+
+.btn-danger {
     background-color: #dc3545;
+    color: white;
 }
 
 .btn-small:hover {
@@ -147,5 +158,16 @@ th {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+.btn-add-product {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 4px;
+    background-color: #007bff;
+    border: 0;
+    padding: 10px;
 }
 </style>

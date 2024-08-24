@@ -93,9 +93,17 @@ export default {
     color: white;
     border-radius: 4px;
     background-color: #007bff;
+    padding: 10px;
 }
 
 .add-order-link:hover {
     background-color: #0056b3;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border: 0;
+    border-radius: 4px
 }
 </style>

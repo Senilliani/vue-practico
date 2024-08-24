@@ -178,6 +178,9 @@ input[type="text"] {
     background-color: #28a745;
     color: white;
     cursor: pointer;
+    border-radius: 4px;
+    border: 0;
+    padding: 10px;
 }
 
 .submit-button:hover {

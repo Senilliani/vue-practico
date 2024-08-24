@@ -20,4 +20,9 @@ export default {
 nav a {
   margin: 0 10px;
 }
+
+nav {
+  margin: 20px 0;
+  text-align: center;
+}
 </style>
