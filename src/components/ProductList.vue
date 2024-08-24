@@ -1,7 +1,5 @@
 <template>
     <div class="product-list-container">
-        {{ project_id }}
-
         <h1>Productos</h1>
         <table>
             <thead>
